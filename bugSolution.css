@@ -1,0 +1,20 @@
+/* Corrected CSS using calc() */
+#myElement {
+  width: calc(100vw - 20px);
+  /* Correct: uses valid units (vw and px) and operator (-) */
+}
+
+/* Other examples of correct usage */
+#anotherElement {
+  height: calc(50% + 2em);
+}
+#yetAnotherElement {
+  font-size: calc(16px * 1.5);
+}
+/* Avoid */
+/* Incorrect: missing operator between values */
+/* #incorrectElement { width: calc(100px 20px); } */
+/* Incorrect: mixing incompatible units (px and %) directly */
+/* #incorrectElement { width: calc(50% + 100px); } */
+/* Correct: Ensure you're subtracting from something.  calc(100% - 50px) is correct */
+/* Incorrect:  calc( - 50px) will fail */
